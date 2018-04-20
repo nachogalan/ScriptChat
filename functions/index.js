@@ -17,6 +17,6 @@ function emojifyText(text) {
     var emojifiedText = text;
     emojifiedText = emojifiedText.replace(/\blol\b/ig, "😂");
     emojifiedText = emojifiedText.replace(/\bcat\b/ig, "😸");
-    emojifiedText = emojifiedText.replace(/\b111122223\b/ig, "Numero Privado");
+    emojifiedText = emojifiedText.replace(/\b(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}\b/ig, "CAMPO OCULTO");
     return emojifiedText;
 }
