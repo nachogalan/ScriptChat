@@ -12,7 +12,7 @@ exports.emojify = functions.database.ref("/messages/{pushID}/text").onCreate(myH
     var emojifiedData = emojifyText(originalData);
     return myHandler.ref.set(emojifiedData);
 });
-
+//Al intentar introducir un numero, para que la funcion de Campo Oculto se aplique habra que empezar el numero con "+34"
 function emojifyText(text) {
     var emojifiedText = text;
     emojifiedText = emojifiedText.replace(/\blol\b/ig, "😂");
