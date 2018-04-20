@@ -10,7 +10,6 @@ exports.emojify = functions.database.ref("/messages/{pushID}/text").onCreate(myH
     console.log("Emojify...");
     var originalData = myHandler.val();
     var emojifiedData = emojifyText(originalData);
-
     return myHandler.ref.set(emojifiedData);
 });
 
@@ -18,5 +17,6 @@ function emojifyText(text) {
     var emojifiedText = text;
     emojifiedText = emojifiedText.replace(/\blol\b/ig, "😂");
     emojifiedText = emojifiedText.replace(/\bcat\b/ig, "😸");
+    emojifiedText = emojifiedText.replace(/\b111122223\b/ig, "Numero Privado");
     return emojifiedText;
 }
